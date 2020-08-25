@@ -311,7 +311,7 @@ header .main-menu li a:hover::after {
   left: 0px;
   position: absolute;
   top: 0px;
-  width: 1160px;
+  width: calc(100% - 800px);
   z-index: 0;
 }
 
@@ -413,7 +413,7 @@ header .main-menu li a:hover::after {
   left: 0px;
   position: absolute;
   top: 0px;
-  width: 1160px;
+  width: calc(100% - 800px);
   z-index: 0;
 }
 
