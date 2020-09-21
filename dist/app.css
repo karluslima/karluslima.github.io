@@ -98,6 +98,10 @@ body #overlay {
   z-index: 2;
 }
 
+body #root {
+  overflow: hidden;
+}
+
 .wrapper {
   position: relative;
   margin: 0 auto;
@@ -124,7 +128,7 @@ body #overlay {
 
 @media (min-width: 1200px) {
   .wrapper {
-    width: 1200px;
+    width: 1080px;
   }
 }
 
@@ -281,7 +285,7 @@ header .main-menu li a:hover::after {
 }
 
 #solutions h2.title span {
-  font-size: 5.5rem;
+  font-size: 5.2rem;
   font-weight: 800;
 }
 
@@ -323,7 +327,7 @@ header .main-menu li a:hover::after {
 
 #solutions .benchmarking .title span {
   display: block;
-  font-size: 5.5rem;
+  font-size: 5.2rem;
   font-weight: 700;
   line-height: 48px;
 }
@@ -383,7 +387,7 @@ header .main-menu li a:hover::after {
 }
 
 #solutions h2.title span {
-  font-size: 5.5rem;
+  font-size: 5.2rem;
   font-weight: 800;
 }
 
@@ -425,7 +429,7 @@ header .main-menu li a:hover::after {
 
 #solutions .benchmarking .title span {
   display: block;
-  font-size: 5.5rem;
+  font-size: 5.2rem;
   font-weight: 700;
   line-height: 48px;
 }
@@ -541,8 +545,14 @@ header .main-menu li a:hover::after {
   background-repeat: no-repeat;
   background-position: left top;
   min-height: 555px;
-  width: 1300px;
+  width: 100%;
   z-index: 1;
+}
+
+@media (min-width: 1300px) {
+  .data-science .wrapper {
+    max-wdth: 1300px;
+  }
 }
 
 .data-science .title {
@@ -640,6 +650,12 @@ header .main-menu li a:hover::after {
   width: 378px;
 }
 
+@media (max-width: 1999px) {
+  .articles-content .article {
+    width: 320px;
+  }
+}
+
 .articles-content .article::before {
   background-image: url(../dist/arrow-article.png);
   content: '';
@@ -674,14 +690,14 @@ header .main-menu li a:hover::after {
   border: 0;
   border-bottom: 3px solid #000;
   border-left: 3px solid #000;
-  left: -40px;
-  height: 50px;
+  left: -20px;
+  height: 40px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
   text-indent: -999em;
-  width: 50px;
+  width: 40px;
   z-index: 10;
 }
 
@@ -690,14 +706,14 @@ header .main-menu li a:hover::after {
   border: 0;
   border-bottom: 3px solid #000;
   border-left: 3px solid #000;
-  right: -40px;
-  height: 50px;
+  right: -20px;
+  height: 40px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%) rotate(-135deg);
           transform: translateY(-50%) rotate(-135deg);
   text-indent: -999em;
-  width: 50px;
+  width: 40px;
   z-index: 10;
 }
 

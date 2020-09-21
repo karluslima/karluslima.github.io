@@ -58,8 +58,8 @@
         <div class="wrapper">
           <h2 class="title">Analisamos os dados <br>para facilitar <br>as suas <span>decisões</span> </h2><!-- /.title -->
           <div class="content">Atuamos com a elaboração e avaliação de modelos de benchmarking, como Data Envelopment Analysis (DEA). Forte experiência
-          na avaliação e proposição de modelos regulatórios de energia elétrica e saneamento. Além disso, atuamos com a aplicação
-          de ferramentas de Data Science que geram informação para tomada de decisão.</div><!-- /.content -->
+          na avaliação e proposição de modelos regulatórios para os setores de energia elétrica e saneamento. Além disso, atuamos
+          com a aplicação de ferramentas de Data Science que geram informação para tomada de decisão.</div><!-- /.content -->
         </div><!-- /.wrapper -->
       </section><!-- /#about -->
       
@@ -154,7 +154,7 @@
             </div><!-- /.team -->
             <div class="team">
               <img src="./dist/ana.png" alt="Ana Lopes Miranda" class="photo" width="234px" height="234px">
-              <div class="name">Ana Lopes Miranda</div><!-- /.name -->
+              <div class="name">Ana Lúcia Lopes-Ahn</div><!-- /.name -->
               <div class="description">
                 Ex-professora Titular da Universidade Federal de Minas Gerais (UFMG) no departamento de Ciências Econômicas e
                 Administração é Diretora Executiva da Lopes-Ahn Consultores Associados Ltda, consultora e pesquisadora na área de
@@ -207,7 +207,7 @@
 
       <section class="articles">
         <div class="title">
-          Artigos publicados em <span>períodicos</span>
+          Artigos mais recentes publicados em <span>periódicos</span>
         </div><!-- /.title -->
         <div class="articles-content">
           <div class="wrapper">
@@ -329,7 +329,18 @@
       $('.articles-content .wrapper').slick({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToScroll: 3,
+        responsive: [
+          {
+            breakpoint: 1250,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              variableWidth: true
+            }
+          }
+        ]
       });
     });
   </script>
