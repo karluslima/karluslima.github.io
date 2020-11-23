@@ -125,7 +125,11 @@
         </div><!-- /.data-science -->
 
         <div class="solutions-items">
-          <img src="./dist/solutions.png" alt="Consultoria" height="318px" width="1653px">
+          <!-- <img src="./dist/solutions.png" alt="Consultoria" height="318px" width="1653px"> -->
+          <picture>
+            <source srcset="./dist/solutions.png" media="(min-width: 768px)">
+            <img srcset="./dist/solutions-mobi.png" alt="Consultoria" class="mobi-image">
+          </picture>
         </div><!-- /.solutions-items -->
       </section><!-- /#solutions -->
 
@@ -296,7 +300,11 @@
 
       <div class="book">
         <a href="https://storage.googleapis.com/wzukusers/user-34902136/documents/5d8a8621e0f601WZdScR/livro%20DEA2014.pdf" rel="noopener noreferrer" target="_blank">
-          <img src="./dist/book.png" alt="Acesse gratuitamente Livro DEA 2014" width="1614px" height="488px">
+          <!-- <img src="./dist/book.png" alt="Acesse gratuitamente Livro DEA 2014" width="1614px" height="488px"> -->
+          <picture>
+            <source srcset="./dist/book.png" media="(min-width: 768px)">
+            <img srcset="./dist/book-mobi.png" alt="Acesse gratuitamente Livro DEA 2014" class="mobi-image">
+          </picture>
         </a>
       </div><!-- /.book -->
 
@@ -339,7 +347,16 @@
               infinite: true,
               variableWidth: true
             }
-          }
+          }, {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 2,
+              infinite: true,
+              variableWidth: true,
+              arrows: false
+            }
+          }       
         ]
       });
     });
