@@ -51,14 +51,18 @@
           <div class="actions">
             <div class="training"> 
               <button class="btn-go">Treinamento em Revisão Tarifária</button><!-- /.btn-go -->
-              <img src="" alt="" class="close">
+              <div class="img-container">
+                <div class="close-btn">X</div><!-- /.close -->
+                <img src="./dist/treinamento-online.jpeg" alt="Treinamento em Revisão Tarifária">
+              </div><!-- /.img-container -->
             </div><!-- /.training -->
             <div class="program-content">
-              <a href="/" class="btn-go"> Conteúdo Programático do Curso Online em Revisão Tarifária </a><!-- /.btn-go -->
+              <a href="./dist/conteudo-programatico-do-curso-online-em-revisao.pdf" class="btn-go" target="_blank" rel="noopener noreferrer"> Conteúdo Programático do Curso Online em Revisão Tarifária </a><!-- /.btn-go -->
             </div><!-- /.program-content -->
           </div><!-- /.actions -->
         </div><!-- /.wrapper -->
       </div><!-- /.banner -->
+
     </header>
 
 
@@ -342,7 +346,22 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script>
+    $(document).keydown(function (event) {
+      if (event.keyCode == 27) {
+        $('.training .img-container').removeClass('opened');
+      }
+    });
+
     $(document).ready(function () {
+
+      $('.training .btn-go').on('click', function(){
+        $('.training .img-container').addClass('opened');
+      });
+
+      $('.img-container .close-btn').on('click', function () {
+        $('.img-container').removeClass('opened');
+      });
+
       $('.articles-content .wrapper').slick({
         infinite: true,
         slidesToShow: 3,

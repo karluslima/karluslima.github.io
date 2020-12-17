@@ -289,6 +289,84 @@ header .main-menu li a:hover::after {
   z-index: 1;
 }
 
+.banner .actions {
+  background-color: #0d2330;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+}
+
+.banner .btn-go {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #00b1f5;
+  border-radius: 2px;
+  border: 0;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 26px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 10px;
+  max-width: 435px;
+  padding: 0 15px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.banner .training .img-container {
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -webkit-box-shadow: 0 0 0 20000px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0 20000px rgba(0, 0, 0, 0.5);
+  left: 50%;
+  max-width: 60vw;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.banner .training .img-container img {
+  padding: 10px;
+}
+
+.banner .training .img-container .close-btn {
+  position: absolute;
+  right: -14px;
+  color: #000;
+  font-size: 17px;
+  padding: 2px 8px;
+  z-index: 52;
+  font-weight: 700;
+  top: -17px;
+  background: #fff;
+}
+
+.banner .training .img-container .close-btn:hover {
+  cursor: pointer;
+}
+
+.banner .training .img-container.opened {
+  opacity: 1;
+  visibility: visible;
+}
+
 #about {
   background-color: #fff;
   padding: 30px 15px 15px;
@@ -682,7 +760,7 @@ header .main-menu li a:hover::after {
 #about-team .content .team .name {
   color: #00aeef;
   font-family: "Open Sans", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 800;
   margin: 15px 0;
   text-transform: uppercase;
@@ -803,7 +881,6 @@ header .main-menu li a:hover::after {
 
 @media (min-width: 768px) {
   .data-science .btn-go {
-    bottom: 55px;
     position: relative;
     right: 10%;
   }
