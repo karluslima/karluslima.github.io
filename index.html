@@ -49,14 +49,14 @@
         <div class="wrapper">
           <img src="./dist/full-banner.png" alt="Consultoria" height="573px" width="1200px">
           <div class="actions">
-            <div class="training"> 
+            <div class="training hide"> 
               <button class="btn-go">Treinamento em Revisão Tarifária</button><!-- /.btn-go -->
               <div class="img-container">
                 <div class="close-btn">X</div><!-- /.close -->
                 <img src="./dist/treinamento-online.jpeg" alt="Treinamento em Revisão Tarifária">
               </div><!-- /.img-container -->
             </div><!-- /.training -->
-            <div class="program-content">
+            <div class="program-content hide">
               <a href="./dist/conteudo-programatico-do-curso-online-em-revisao.pdf" class="btn-go" target="_blank" rel="noopener noreferrer"> Conteúdo Programático do Curso Online em Revisão Tarifária </a><!-- /.btn-go -->
             </div><!-- /.program-content -->
           </div><!-- /.actions -->
@@ -152,7 +152,7 @@
             Nossa <span>Equipe</span>
           </div><!-- /.title -->
           <div class="content">
-            <div class="team">
+            <div class="team hide">
               <img src="./dist/marcelo.png" alt="Marcelo Azevedo Costa" class="photo" width="234px" height="234px">
               <div class="name">Marcelo Azevedo Costa</div><!-- /.name -->
               <div class="description">
@@ -353,6 +353,29 @@
     });
 
     $(document).ready(function () {
+      // exibir depois de quantos dias?
+      var numberOfDaysToAdd = 1;
+      // que dia é hoje?
+      var today = new Date().getTime() + (30 * 24 * 60 * 60 * 1000)
+      var future = new Date().getTime() + (30 + numberOfDaysToAdd) * 24 * 60 * 60 * 1000;
+      // verifica se existe alguma data guardada
+      var showedTime = localStorage.getItem("popupTime");
+      // se sim
+      if (showedTime !== null) {
+        // verifica se já passou tempo suficiente desde a última exibição
+        showedTime = parseInt(showedTime);
+        if (today > showedTime) {
+          // Mostrar pop-up
+          $('.modal').show();
+          // Atualizar data no localstorage
+          localStorage.setItem("popupTime", future);
+        }
+      } else {
+        // a pop-up nunca foi mostrada antes, então vamos criar a data 
+        localStorage.setItem("popupTime", future);
+        // Mostrar pop-up
+        $('.modal').show();
+      }
 
       $('.training .btn-go').on('click', function(){
         $('.training .img-container').addClass('opened');
@@ -360,6 +383,10 @@
 
       $('.img-container .close-btn').on('click', function () {
         $('.img-container').removeClass('opened');
+      });
+
+      $('.modal .close-btn').on('click', function () {
+        $('.modal').addClass('close');
       });
 
       $('.articles-content .wrapper').slick({
