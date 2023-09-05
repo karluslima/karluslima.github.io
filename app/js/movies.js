@@ -17,7 +17,7 @@ async function fetchMovies() {
     var featuredSlide = document.querySelector('.featured-banners .slider-container');
     for (var i = 0; i < 5; i++) {
       var item = items[i];
-      $(featuredSlide).append(`<li><img src="${baseURL}w780/${item.backdrop_path}" loading="lazy"></li>`);
+      $(featuredSlide).append(`<li><img src="${baseURL}w780/${item.backdrop_path}" loading="lazy" width="780px" heigth="439px" alt="${item.title}"></li>`);
     }
 
     return Promise.resolve();
@@ -38,7 +38,13 @@ function getMovies() {
             var sliderSelector = document.querySelector(`.slider-${genero}`);
             for (var i = 0; i < 15; i++) {
               var movie = movieGender[i];
-              $(sliderSelector).append(`<li><img src="${baseURL}w342/${movie.poster_path}" loading="lazy" class="movie-poster"></li>`);
+              $(sliderSelector).append(`<li><img src="${baseURL}w342/${movie.poster_path}"
+                loading="lazy"
+                class="movie-poster"
+                alt="${movie.title}"
+                width="342px"
+                heigth="513px">
+              </li>`);
             }
           });
       }
