@@ -38,12 +38,13 @@ function getMovies() {
             var sliderSelector = document.querySelector(`.slider-${genero}`);
             for (var i = 0; i < 15; i++) {
               var movie = movieGender[i];
-              $(sliderSelector).append(`<li><img src="${baseURL}w342/${movie.poster_path}"
-                loading="lazy"
-                class="movie-poster"
-                alt="${movie.title}"
-                width="342px"
-                heigth="513px">
+              $(sliderSelector).append(`<li>
+              <span class="cart d-flex align-items-center justify-content-center">
+                <a href="#">
+                  <img src="./dist/images/cart.svg" alt="ícone carrinho">
+                </a>
+              </span>
+              <img src="${baseURL}w342/${movie.poster_path}" loading="lazy" class="movie-poster" alt="${movie.title}" width="342px" heigth="513px">
               </li>`);
             }
           });

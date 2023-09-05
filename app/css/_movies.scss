@@ -10,3 +10,29 @@
 section .container-fluid {
   padding-left: 80px;
 }
+
+.cart {
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.3);
+  height: 22px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 22px;
+
+  img {
+    height: 12px;
+    width: 12px;
+  }
+
+  @media (min-width: 768px) {
+    height: 44px;
+    width: 44px;
+
+    img {
+      height: 22px;
+      width: 22px;
+    }
+  }
+}
