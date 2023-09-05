@@ -1,0 +1,57 @@
+@font-face {
+  font-family: SKY-Icon-Font;
+  src: url(../fonts/SKY-Icon-Font.eot);
+  src: url(../fonts/SKY-Icon-Font.eot?#iefix) format("embedded-opentype"),url(../fonts/SKY-Icon-Font.woff) format("woff"),url(../fonts/SKY-Icon-Font.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal
+}
+
+.nav-item {
+  .sky_icon {
+    background-color: #fafaff;
+    height: 24px;
+    width: 24px;
+  }
+}
+.sky_icon {
+  font-family: SKY-Icon-Font,fantasy!important;
+  font-size: 1rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  &:hover {
+    background-color: #e3e3eb;
+  }
+}
+
+.sky_icon.icon_md {
+  font-size: 1.5rem;
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+
+.sky_icon-line-a-plus:before {
+  content: "\e91e";
+}
+.sky_icon-line-contrast:before {
+  content: "\e91f";
+}
+.sky_icon-line-a-minus:before {
+  content: "\e91d";
+}
+.sky_icon-line-acessibility:before {
+  content: "\e98d"
+}
+.sky_icon-line-social-facebook:before {
+  content: "\e910";
+}
+.sky_icon-line-social-twitter:before {
+  content: "\e912";
+}
+.sky_icon-line-social-you-tube:before {
+  content: "\e913";
+}
+.sky_icon-line-social-instagram:before {
+  content: "\e911";
+}

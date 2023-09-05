@@ -1,0 +1,121 @@
+footer,
+.accordion-item,
+.accordion-button,
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
+  background-color: #f1f2fa;
+}
+.social-networks {
+  .sky_icon {
+    &::before {
+      color: rgba(0, 0, 0, 0.6);
+    }
+    &:hover {
+      background-color: transparent;
+      &::before {
+        color: rgba(243, 92, 88, 0.99);
+      }
+    }
+  }
+}
+
+.app-header {
+  color: rgba(243, 92, 88, 0.99);
+  max-width: 300px;
+  @media (min-width: 768px) {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+.apps {
+  margin-top: 20px;
+  margin-left: 64px;
+}
+.navigation-item {
+  a {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 44px;
+    padding: 0;
+  }
+}
+.accordion-button {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 44px;
+  padding: 0;
+
+  &::after {
+    background-image: url("../images/arrow.svg");
+    background-size: contain;
+    height: 16px;
+    width: 16px;
+  }
+
+  @media (min-width: 768px) {
+    pointer-events: none;
+    &::after {
+      display: none;
+    }
+  }
+
+  &:not(.collapsed) {
+    color: rgba(0, 0, 0, 0.6);
+    &::after {
+      background-image: url("../images/arrow.svg");
+      background-size: contain;
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+.accordion-flush {
+  .accordion-item {
+    @media (min-width: 768px) {
+      border: 0;
+      .collapse {
+          display: block;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    a {
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 30px;
+      margin-right: 10px;
+      padding: 0;
+
+      &:hover {
+        color: rgba(243, 92, 88, 0.99);
+      }
+    }
+  }
+}
+.footer-links {
+  background: white;
+  padding: 22px 0;
+}
+.footer-link {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  white-space: nowrap;
+  &:hover {
+    color: rgba(243, 92, 88, 0.99);
+  }
+}
+
+.copyright {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  padding: 22px 0;
+}
